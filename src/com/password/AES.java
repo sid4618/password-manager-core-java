@@ -23,7 +23,7 @@ public class AES {
 
         byte[] encValue = cipher.doFinal(valueToEnc.getBytes());
         byte[] encryptedByteValue = new Base64().encode(encValue);
-       // System.out.println("Encrypted Value :: " + new String(encryptedByteValue));
+
 
         return new String(encryptedByteValue);
     }
@@ -37,7 +37,7 @@ public class AES {
 
         byte[] encryptVal = cipher.doFinal(decodedBytes);
 
-        System.out.println("Decrypted Value :: " + new String(encryptVal));
+
         return new String(encryptVal);
     }
 

@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import static com.password.Generate.generatePassword;
 import static com.password.User.*;
+import static com.password.passwordOperations.deletePassword;
 
 public class Main {
 
@@ -22,7 +23,8 @@ public class Main {
 
             case 2 -> loginUser();
 
-            case 3 -> deleteUser();
+//            case 3 -> deleteUser();
+            case 3 -> deletePassword("siddo");
 
             default -> System.out.println("Invalid Choice");
 
