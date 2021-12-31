@@ -12,7 +12,17 @@ import static com.password.AES.generateKey;
 import static com.password.Operations.userOperations;
 
 public class User {
-    public static void newUser(String userName,String password) throws Exception {
+    public static void newUser() throws Exception {
+
+        Scanner in = new Scanner(System.in);
+        String userName = "";
+        String password = "";
+
+        System.out.print("Enter Username:");
+        userName = in.next();
+        System.out.print("Enter Password:");
+        password = in.next();
+
         try {
 
             String userPath = "E:\\Code\\College\\JavaCode\\Project\\users\\";
@@ -37,7 +47,16 @@ public class User {
             e.printStackTrace();
         }
     }
-    public static void loginUser(String userName,String password) throws Exception {
+    public static void loginUser() throws Exception {
+
+        Scanner in = new Scanner(System.in);
+        String userName = "";
+        String password = "";
+
+        System.out.print("Enter Username:");
+        userName = in.next();
+        System.out.print("Enter Password:");
+        password = in.next();
 
         String userPath = "E:\\Code\\College\\JavaCode\\Project\\users\\";
         String pwdPath = "E:\\Code\\College\\JavaCode\\Project\\users\\passwords\\";
@@ -61,5 +80,32 @@ public class User {
         else
             System.out.println("User does not Exists - Login Failed");
 
+    }
+    public static void deleteUser() throws Exception {
+        Scanner in = new Scanner(System.in);
+        String userName = "";
+        String password = "";
+
+        System.out.print("Enter Username:");
+        userName = in.next();
+        System.out.print("Enter Password:");
+        password = in.next();
+
+        String userPath = "E:\\Code\\College\\JavaCode\\Project\\users\\";
+        String pwdPath = "E:\\Code\\College\\JavaCode\\Project\\users\\passwords\\";
+        File object = new File(userPath + userName+".txt");
+        File pwdObject = new File(pwdPath + userName+"Pwd"+".txt");
+
+        if (object.exists() && pwdObject.exists()){
+
+            if(object.delete() && pwdObject.delete())
+            {
+                System.out.println("User deleted successfully");
+            }
+            else
+            {
+                System.out.println("Failed to delete User");
+            }
+        }
     }
 }
