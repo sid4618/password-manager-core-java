@@ -23,6 +23,6 @@ They are encrypted and decrypted using Salt <secret_key>
 If you don't understand the encryption/decryption code make sure you watch some stuff about AES on youtube.
 
 Also the delete user option is not working, if someone is interested you can do it as well
-To get started just open the folder in Intellij Idea and make sure you add the dependency as well
+To get started just open the folder in Intellij Idea and make sure you add the dependency as well.
 Cheers!
 
