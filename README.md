@@ -1,6 +1,6 @@
-# password-manager-core-java
+# Password 🔑 Manager
 
-College project in core java
+College project in Core Java
 
 ## Simple Command line password manager 
 * uses AES encryption along the way
